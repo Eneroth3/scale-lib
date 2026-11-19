@@ -54,6 +54,7 @@ class TC_Scale < TestUp::TestCase
     assert(Scale.new("1\"=4'").valid?)
     assert(Scale.new("1\" = 4'").valid?)
     assert(Scale.new("~1\" = 4'").valid?)
+    assert(Scale.new("3,5mm = 1'").valid?)
 
     refute(Scale.new("Hej").valid?)
     refute(Scale.new("1%%").valid?)
